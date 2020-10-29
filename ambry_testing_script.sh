@@ -1,12 +1,18 @@
 #!/bin/sh
 #Ambry's testing script for PRP Homeworks
-#Version 0.2, 24.10.2020
+#Version 2.5, 24.10.2020
 
 HW=04
-REPEAT=50
+REPEAT=10
 GENERATOR=./b0b36prp-hw$HW-genref
 FOLDER_NAME=files
 TESTED_PROGRAM=./hw$HW-b0b36prp
+
+echo "Welcome to Ambry's (amborjak) script for testing PRP HW, Version 2.5 - 29.10.2020"
+echo "If you want the latest version or you have found some issues/bugs go to:"
+echo "https://gitlab.fel.cvut.cz/ambrojak/prp_hw_tester"
+echo "https://github.com/AmbryTheBlue/PRP_HW_tester"
+echo "You can also request new features, but ..."
 
 if [ "$1" = "-osx" ]
 then
@@ -78,5 +84,6 @@ if [ -e $PUBLIC_PATH ];then
 else
     echo "Folder ($PUBLIC_PATH) used for public examples not found"
 fi
-echo "Testing complete. This script terminates here!"
+echo "Testing complete! If any errors ocurred go to following URL and raise issue"
+echo "https://gitlab.fel.cvut.cz/ambrojak/prp_hw_tester"
 return 0
